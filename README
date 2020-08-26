@@ -1,7 +1,9 @@
          =====Welcome to Events!=====
 
-  This app let you record the events what you interested.
-I hope you enjoy it---although it is simple!
+    本程序用于跟踪记录事件消息，并将其加上标签，以便于日后搜索查看。
+欢迎试用。测试环境：1、rails 5.2.4.3 on ruby 2.5.8p224; 2、MySQL 
+server 5.7.30 on docker; 3、Nginx 1.18.0 .
+
 
 
           Albert.ludake@gmail.com @-@
