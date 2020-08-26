@@ -18,18 +18,19 @@
 
     
     
-    <div class="image_tag">   
+    <div class="image_tag" style="text-align:center, margin：auto" >   
         <p>
 
-         <img src=<%=(event.image_url)%> width="480" height="320" alt="Follow me ro RoR.">
+         <img src=<%=(event.image_url)%> style="width:480px; height:320px;"   alt="Follow me ro RoR.">
         </p>
+    </div>   
       <p>
         <div class="description">
          <%=  simple_format(h(event.description)) %>
         </div>
       </p>
      
-    </div>
+    
    
     
 </div>

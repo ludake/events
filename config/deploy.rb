@@ -5,10 +5,16 @@ set :application, "events"
 set :repo_url, "git@github.com:ludake/events.git"
 
 
-role :web, 'localhost'                         
-role :app, 'localhost'                         
-role :db,  'localhost', :primary => true
+role :web, domain                         
+role :app, domain                         
+role :db,  domain
 
+
+set :default_environment,{
+  'PATH' => '$PATH:/usr/local/bin:/usr/bin:/bin',
+  'GEM_PATH' => '~/.gem/ruby/2.5.0:/usr/lib64/ruby/gems/2.5.0'
+
+}
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -43,11 +49,13 @@ role :db,  'localhost', :primary => true
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-set :deploy_to, '/myraid10/var/www/pylontqi/public/events'
-set :html_deploy_to, "#{fetch(:deploy_to)}/html"
+set :deploy_to, '/myraid10/var/www/pylontqi/public/events/public/'
+
 # Default value for :scm is :git
 
 set :user,            'ludake'
+set :domain,          'pylontqi.mynetgear.com'
+
 # Default value for :format is :pretty
  set :format, :pretty
 

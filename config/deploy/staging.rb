@@ -72,4 +72,3 @@ set :nginx_server_name, "pylontqi.mynetgear.com"
 # set :rvm_type, :oss
 #set :monit_role, :all
 
-set :html_branch, 'staging'
