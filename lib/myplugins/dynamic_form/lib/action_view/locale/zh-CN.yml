@@ -1,0 +1,21 @@
+"zh-CN":
+  
+  errors:
+    template:
+      header:
+        one: "有1个错误发生，导致「%{model}」无法被保存。"
+        other: "有%{count}个错误发生，导致「%{model}」无法被保存。"
+      body: "如下字段出现错误："
+  
+  activerecord:
+    models:
+      event: '事件'
+    attributes: 
+      event: 
+        title: '标题'
+        location: '地点'
+        occurs_on: '发生时间'
+  
+      
+    
+  

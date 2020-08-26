@@ -1,0 +1,19 @@
+
+<%= error_messages_for :user %>
+
+<p><label><%= I18n.t 'Login name' %>:<br/>
+		<%= text_field :user, :login %>
+   </label>
+</p>
+<p><label><%= I18n.t 'Email' %>:<br/>
+		<%= text_field :user, :email %>
+   </label>
+</p>
+<p><label><%= I18n.t 'Password' %>:<br/>
+		<%= password_field :user, :password %>
+   </label>
+</p>
+<p><label><%= I18n.t 'Password confirmation' %>:<br/>
+		<%= password_field :user, :password_confirmation %>
+   </label>
+</p>

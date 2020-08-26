@@ -1,0 +1,19 @@
+conferences:
+  id:   1
+  name: Conferences
+
+parties:
+  id:   2
+  name: Parties
+
+concerts:
+  id:   3
+  name: Concerts
+
+readings:
+  id:   4
+  name: Readings
+
+movies:
+  id:   5
+  name: Movies

@@ -1,0 +1,36 @@
+<%= error_messages_for 'event' %>
+
+<p><label for="event_title"> <%= t('Title') %> </label><br/>
+	<%= text_field 'event', 'title' %>
+</p>
+
+<p><label for="categories"> <%= t('Categories') %> </label><br/>
+	<%= select_tag('categories[]',  options_for_select(Category.all.collect{|c|[c.name, c.id]}, @event.category_ids), :multiple => true) %>
+</p>
+
+<p><label for="event_location"> <%= t('Location') %> </label><br/>
+    
+    <%= text_field 'event', 'location' %>
+</p>
+<p><label for="event_occurs_on"> <%= t('Occurs on') %> </label><br/>
+    
+    <%= date_select 'event', 'occurs_on' %>
+</p>
+<p><label for="event_url"> <%= t('Url') %> </label><br/>
+	
+	<%= text_field 'event', 'url' %>
+</p>
+<p><label for="event_image_url"> <%= t('Image url') %></label><br />
+	<%= text_field 'event', 'image_url' %>
+</p>
+<p><label for="event_descritpion"> <%= t('Description') %> </label><br/>
+	
+	<%= text_area 'event', 'description', :rows => 5 %>
+</p>
+
+<p><label for="event_tags">
+
+   <%= t('Tags') %> <span> (<%= t('comma separated') %>) </span> </label><br/>
+
+   <%= text_field_tag 'tags', @event.tag_list, :size => 40 %>
+</p>

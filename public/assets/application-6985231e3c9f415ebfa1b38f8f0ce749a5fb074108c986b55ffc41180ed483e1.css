@@ -1,0 +1,316 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+
+
+*/
+
+
+@media print { #sidebar { display: none; }
+               #content { float: none; width: 90%; } }
+
+body { background: #f8bd0b; font: normal 14px "lucida grande", arial, helvetica, sans-serif; }
+
+h1,h2,h3,h4,h5,h6 { font-family: helvetica, arial, sans-serif; }
+
+h1 { font-size: 28px; margin-bottom: 15px; }
+h2 { font-size: 18px; margin-bottom: 15px; }
+h3 { font-size: 17px; margin-bottom: 15px; }
+
+input  { font: normal 12px "lucida grande", verdana, sans-serif; }
+textarea { font: normal 12px "bitstream vera sans mono", monaco, "courier new", courier, monospace; }
+
+code, pre { font: normal 80% "bitstream vera sans mono", monaco, "courier new", courier, monospace; }
+
+abbr { border: none; }
+cite { font-style: normal; }
+
+img { border: none; }
+
+a { text-decoration: underline; padding: 1px; }
+
+a:link,
+a:visited { color: #03c; }
+
+a:hover,
+a:active { color: #fff; background: #000; text-decoration: none; }
+
+a.cancel,
+a.cancel:link,
+a.cancel:visited { color: #c00; }
+
+a.delete,
+a.delete:link,
+a.delete:visited { color: #990000; }
+
+hr { visibility: hidden; clear: both; }
+
+
+/*==================================================
+ * Definitions for layout (positioning, width, height, margin, padding)
+ *
+ * #application
+ *   #header
+ *   #page
+ *     #content
+ *     #sidebar
+ *   #footer
+ ==================================================*/
+
+body { text-align: center; margin: 0; padding: 0; }
+
+#header { float: left; width: 100%; }
+#header .container, #footer { width: 800px; margin: auto; }
+#header .statusbar { margin: auto; padding: 4px 12px; height: 16px; }
+#header .statusbar .logo { float:left; }
+#header .statusbar .menu { float:right; }
+
+#page {
+  width: 759px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  padding: 16px;
+  text-align: left;
+  clear: both;
+}
+
+#content { min-height: 360px; }
+
+#footer { text-align: left; clear:both; }
+
+
+/*==================================================
+ * Definitions for the tabbed interface
+ * Tab colors are meant to be customized to your liking
+ ==================================================*/
+
+#header .statusbar {
+  color: #ddd; background: #333;
+  font-size: 11px;
+  border-bottom: 2px solid #272727;
+}
+
+#header { background: #141414; }
+
+/*-------------------------------------------------
+ The background color of all tabs
+ -------------------------------------------------*/
+#header .tabs li { background: #272727; }
+
+/*-------------------------------------------------
+ The text color of all tabs
+ -------------------------------------------------*/
+#header .tabs a { color: #fff; }
+
+/*-------------------------------------------------
+ The hover color of all tabs
+ -------------------------------------------------*/
+#header .tabs a:hover { 
+  background: #fff;
+  color: #090;
+}
+
+/*-------------------------------------------------
+ The colors of a selected tab
+ -------------------------------------------------*/
+#header .tabs a.selected,
+#header .tabs a.selected:hover {
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+}
+
+/*-------------------------------------------------
+ Tab dimensions and layout properties
+ -------------------------------------------------*/
+#header .tabs ul {
+  margin: 0 16px; padding: 0;
+  list-style-type: none;
+}
+
+#header .tabs li {
+  float: left;
+  margin: 0; padding: 0;
+  display: inline;
+}
+
+#header .tabs a {
+  float: left;
+  margin: 0; padding: 0.5em 1.8em;
+  text-decoration: none;
+}
+
+
+/*==================================================
+ * Main interface definitions
+ * Everything other than 'layout' and 'tabs'
+ ==================================================*/
+
+/*-------------------------------------------------
+ Header
+ -------------------------------------------------*/
+
+#header .statusbar .menu a:link,
+#header .statusbar .menu a:visited { color: #ddd; text-decoration: none; }
+#header .statusbar .menu a:hover,
+#header .statusbar .menu a:active { color: #fff; }
+#header .statusbar .menu a.selected { color: #fff; font-weight: bold; }
+
+#header .statusbar .logo strong { color: #fff; font-size: 12px; }
+
+/*-------------------------------------------------
+ Page
+ -------------------------------------------------*/
+
+#page { background: #fff; 
+        border-bottom: 4px solid #ccc;
+        border-right:  4px solid #ccc;
+        border-left:   4px solid #ccc; }
+
+/*-------------------------------------------------
+ Content
+ -------------------------------------------------*/
+
+#content h1 { margin-top: 0; }
+
+#content ul { list-style: square; padding-left: 20px; }
+
+/* list items */
+#content .item {
+  margin: 0 0 0.75em 0; padding: 0.2em 0.8em 0.8em 0.8em;
+  border: 1px solid #c1c1c1; background: #f6f6f6;
+}
+
+#content .item h3 {
+  margin: 0 0 0.3em 0; padding: 0.2em 0;
+  border-bottom: 1px dotted #bbb;
+  font-size: 20px;
+  background: #fff;
+}
+
+#content .item h3 a { padding: 3px; }          
+
+#content .item h3 a:link,     
+#content .item h3 a:visited  { color: #000; text-decoration: none; }
+#content .item h3 a:hover    { background: none; text-decoration: underline; }
+
+/* controls */
+#content .item p.controls { font-size: smaller; }
+#content .item p.controls a { color: green; }
+#content .item p.controls a:hover { color: #fff; }
+
+/* email friend */
+#content #email_friend { background: #ffc; padding: 0.5em; }
+
+/*-------------------------------------------------
+ Footer
+ -------------------------------------------------*/
+
+#footer { color: #666; font-size: 11px; }
+
+#footer a:link,
+#footer a:visited { color: #666; }
+#footer a:hover { color: #fff; background: #333; }
+
+/**
+ * Definitions for fields, buttons, and forms
+ * 
+ * Fieldsets can be nested; those containing radio buttons
+ * or checkboxes can be given a class of 'radio'
+ */
+
+form { margin: 0; padding: 0; }
+
+/*-------------------------------------------------
+ Labels
+ -------------------------------------------------*/
+
+form label { color: #444; font-weight: bold; margin: 0 0.8em 0.3em 0; }
+
+form label span { font-weight: normal; font-size: 10px; }
+
+/*-------------------------------------------------
+ Input and text elements
+ -------------------------------------------------*/
+
+form input,
+form select { font-size: 14px; }
+
+form input[type=submit] { font-size: 15px; }
+
+form input.large {
+  font-size: 18px; font-weight: bold; 
+  width: 80%;
+  padding: 4px;
+}
+
+form input.huge {
+  font-size: 22px; font-weight: bold;
+  width: 90%;
+  padding: 4px;
+}
+
+form textarea {
+  width: 97%;
+  padding: 0.3em;
+  display: block;
+  clear: both;
+}
+
+/**
+ * Rules for ActionPack's generated selectors
+ */
+ 
+/*-------------------------------------------------
+ Error explanations
+ -------------------------------------------------*/
+
+div.errorExplanation {
+  border: 2px solid #f00;
+  padding: 7px 7px 12px 7px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+div.errorExplanation h2 {
+  color: #fff !important; font-size: 12px; font-weight: bold; text-align: left;
+  background: #c00;
+  padding: 5px 5px 5px 15px;
+  margin: -7px;  
+}
+
+div.errorExplanation p {
+  color: #333;
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+div.errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/*-------------------------------------------------
+ Fields containing errors
+ -------------------------------------------------*/
+
+div.fieldWithErrors { display: inline; }
+
+div.fieldWithErrors input,
+div.fieldWithErrors select { background: #ffc; }
+
+/*-------------------------------------------------
+ Flash Messages
+ -------------------------------------------------*/
+ 
+div.flash {
+  font-size: 14px; font-weight: bold;
+  color: #390;
+  background: #ffc;
+  margin: 0 0 1em 0; padding: 0.3em;
+  border: 1px solid #fc0;
+}
+
+div.flash h2 { margin-top: 0; }

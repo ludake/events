@@ -1,0 +1,121 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+"zh-CN":
+  Events: '事件'
+  event: '事件'
+  Categories: '类别'
+  Title: '标题'
+  Location: '地点'
+  'Occurs on': '发生时间'
+  index: '列表'
+  show: '详情'
+  edit: '编辑'
+  new: '新建事件'
+  delete: '删除'
+  destroy: '删除'
+  back: '返回前页'
+  create: '新建事件'
+  'Are you sure?': '你真的要删除吗？'
+  'New event': '新建事件'
+  update: '更新'
+  or: '或'
+  Cancel: '取消'
+  Email: '电子邮件'
+  Dear: '亲爱的'
+  'Password confirmation': '密码确认'
+  'Listing events': '事件列表'
+  'Edit event': '编辑事件'
+  'Event was successfully created': '事件成功建立！'
+  'Event was successfully updated': '事件成功更新！'
+  'Are you sure': '您确定要删除吗'
+  'Save Changes': '保存更改'
+  'Sign up!': '我要注册！'
+  'signin': '签入'
+  'Login': '登录'
+  'Login name': '登录名'
+  "Please login to continute!": '请先登录！'
+  'Thanks for signing up!': '感谢您的注册！'
+  'Invalid login/password combination': '无效的用户名/密码'
+  'Information updated': '信息已被更新'
+  'logout': '退出'
+  'logged in as': '已登录'
+  'register': '注册'
+  'New Event': '新建事件'
+  'Edit User': '编辑用户'
+  'User Registration': '用户注册'
+  Password: '密码'
+  Please: '请'
+  Tags: '标签'
+  'comma separated': '请以逗号(,)分隔'
+  Url: 'Url(网址)'
+  Description: '简而述之'
+  'is in the past': '已是过去'
+  'Image url': '图片(URL)'
+  
+ 
+  will_paginate:
+    'previous_label': '前一页'
+    'next_label'    : '后一页'
+  
+  activerecord:
+    models:
+      event: '事件'
+    attributes: 
+      event: 
+        title: '标题'
+        location: '地点'
+        occurs_on: '发生时间'
+      
+    
+    
+    models:
+      user: '用户'
+    attributes:
+      user:
+        login: '登录名'
+        email: '电邮地址'
+        password: '密码'
+        
+      
+    
+    
+    errors:
+      template:
+        header:
+          one: "有1个错误发生，导致「%{model}」无法被保存。"
+          other: "有%{count}个错误发生，导致「%{model}」无法被保存。"
+        body: "如下字段出现错误："
+      
+      messages:
+        blank: '不能为空'
+        taken: "已经被使用"
+        invalid: "是无效的"
+        confirmation: "与确认值不匹配"
+        too_short: "過短（最短为 %{count} 个字符）"
+        too_long: "过长（最长为 %{count} 个字符）"
+        wrong_length: "长度非法（必须为 %{count} 个字符）"
+      
+    
+  
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %e日"
+      long: "%Y年 %B %e日"
+      only_day: "%e日"
+    
+    day_names: [星期天, 星期一, 星期二, 星期三, 星期四, 星期五, 星期六]
+    abbr_day_names: [日, 一, 二, 三, 四, 五, 六]
+    month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    order:
+      - :year
+      - :month
+      - :day
+    
+  
+  datetime:
+    formats:
+      default: "%Y-%m-%dT%H:%M:%S%Z"
+    
+  

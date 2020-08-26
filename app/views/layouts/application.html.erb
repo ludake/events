@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title><%= t 'Events' %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application",  'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>   
+  </head>
+  <body>
+    <div id="application">
+      <div id="header">
+         <div class="container">
+            <div class="statusbar">
+              <div class="logo">
+              <strong>万物生长，请用心记录!</strong>
+              </div>
+              <div class="menu">
+                <% if logged_in? %>
+                    (<%= t('logged in as') %>)
+                        --> 
+                     <%= current_user.login %> 
+                     <%= link_to(t('logout'), logout_url, remote: true, :method => :post) %>
+                <% else -%>
+                     <%= link_to t('register'), signup_url %> 
+                     <%= link_to t('signin'),   login_url %>
+                <% end -%> 
+              </div> 
+            </div>
+          
+   <!--       <br style = "clear:both;">  -->
+          <hr />
+          <div class="tabs">
+            <ul class="navigation">
+              <li>
+                  <%= link_to(t('Events'), events_url)  %>
+                  
+              </li>
+                  <% if logged_in? %>
+                    <li>
+                      <%= link_to(t('New Event'), new_event_url, :method => :get)   %>
+                  
+                    </li>
+                  <% end %>
+            </ul>
+          </div>
+       
+         </div>
+      </div>
+
+      <div id="page">
+        <div id="content">
+        <% if flash[:notice] %>
+          <div class="flash"><%=  flash[:notice] %>  </div> 
+        <% end -%>
+              <%= yield %>
+        </div>
+        <hr />
+      </div>
+   
+      <div id="footer"  >
+         
+         
+         Copyright © 2013-2020 PylonTQi Inc. Some rights reserved.
+
+        
+         <img src="/images/footer-logo.jpg" width="64" height="28"  />
+         <img src="/images/footer-logo-seal.jpg" width="64" height="28"   />  
+      </div>
+
+    </div>
+  </body>
+</html>

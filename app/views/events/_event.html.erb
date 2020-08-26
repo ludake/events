@@ -1,0 +1,35 @@
+<div class="event item">
+    <h3 class="title"> <%= link_to event.title, event_url(event) %> </h3>
+    
+    <% if event.owned_by?current_user %>
+    <p>
+        <%= link_to I18n.t('edit') , edit_event_url(event) %> |
+        <%= link_to I18n.t('delete') , {:action => 'destroy', :id => event}, :confirm => I18n.t('Are you sure?') , :method => :delete %>
+    </p>
+    <% end -%>
+    
+    <u1>
+        <li><%=  event.occurs_on %></li>
+        <li><%=  event.location  %></li>
+    </u1>
+    <div class="url">
+        <li><%=  event.url %></li>
+    </div>
+
+    
+    
+    <div class="image_tag">   
+        <p>
+
+         <img src=<%=(event.image_url)%> width="480" height="320" alt="Follow me ro RoR.">
+        </p>
+      <p>
+        <div class="description">
+         <%=  simple_format(h(event.description)) %>
+        </div>
+      </p>
+     
+    </div>
+   
+    
+</div>

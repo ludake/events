@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: Rails 3.0 released!
+  location: rubyonrails.org
+  occurs_on: 2010-08-29
+
+two:
+  title: Ruby 1.9.2 is outed!
+  location: ruby-lang.org
+  occurs_on: 2010-08-18

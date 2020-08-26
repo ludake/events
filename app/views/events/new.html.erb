@@ -1,0 +1,12 @@
+<h1><%= t('New event') %></h1>
+
+<%= form_tag :action => 'create' do %>
+	<%= render 'form' %>
+<!--    <%= submit_tag_or_cancel  t('create')  %>  -->
+        
+        <%= submit_tag t('create') %>
+        
+        <%= link_to t('back'), events_path %>
+        
+        
+<% end %>

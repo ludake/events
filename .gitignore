@@ -1,0 +1,14 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+tmp/*
+doc/api
+doc/app
+*.swp
+*~
+
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/cable.yml', 'config/master.key')
+
+# Ignore master key for decrypting credentials and more.
+config/master.key

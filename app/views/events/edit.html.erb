@@ -1,0 +1,8 @@
+<h1><%= I18n.t('Edit event') %></h1>
+
+<%= form_tag :action => 'update', :id => @event do %>
+	<%= render 'form' %>
+<!--	<%= submit_tag_or_cancel t('Save Changes') %>  -->
+        <%= submit_tag t('Save Changes') %>
+        <%= link_to t('back'), events_path %>
+<% end %>

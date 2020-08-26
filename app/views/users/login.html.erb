@@ -1,0 +1,13 @@
+<h1><%= t('Please') + t('Login') %></h1>
+
+<%= form_tag :action => 'login' do %>
+  <p><label><%= t('Login name') %>:<br />
+  <%= text_field_tag :login %></label></p>
+
+  <p><label><%= t('Password') %>:<br />
+  <%= password_field_tag :password %></label></p>
+
+  <p>
+    <%= submit_tag t('Login'), :id=>'submit_button',:onclick=>'submit();'  %>
+  </p>
+<% end %>

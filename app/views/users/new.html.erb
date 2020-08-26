@@ -1,0 +1,7 @@
+
+<h2> <%= t('User Registration') %> </h2>
+
+<%= form_tag :action => 'create' do %>
+	<%= render :partial => 'form' %>
+	<p><%= submit_tag t('Sign up!') %></p>
+<% end %>

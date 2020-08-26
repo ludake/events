@@ -1,0 +1,45 @@
+
+<p>
+  <b><%= I18n.t('Title') %>:</b>
+  <%= @event.title %>
+</p>
+
+<p>
+  <b><%= I18n.t('Location') %>:</b>
+  <%= @event.location %>
+</p>
+
+<p>
+  <b><%= I18n.t('Occurs on') %>:</b>
+  <%= @event.occurs_on %>
+</p>
+<p>
+  <b><%= I18n.t('Url') %>:</b>
+  <%= @event.url %>
+</p>
+<p>
+  <b><img src=<%= @event.image_url %> width="480" height="320" alt="Follow me ro RoR."></b>
+</p>
+<p>
+  <b><%= I18n.t('Description') %>:</b>
+
+    <%= @event.description %>
+
+</p>		
+
+<% if logged_in? %> 
+  <% if @event.owned_by?current_user %>
+    
+      <%= link_to I18n.t('edit') , edit_event_url(@event) %> 
+      
+  <% end %>
+  
+
+<% end %>
+  
+  <%=  link_to I18n.t('back'), events_path %>
+
+
+   
+
+
